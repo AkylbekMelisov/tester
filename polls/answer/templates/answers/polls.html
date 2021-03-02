@@ -1,0 +1,5 @@
+{% for poll in polls %}
+<a href="{% url 'questions' poll.id %}">{{ poll.name }}</a>
+{{ poll.date_create }}
+{{ poll.points }}
+{% endfor %}

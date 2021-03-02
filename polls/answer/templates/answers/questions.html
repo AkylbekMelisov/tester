@@ -1,0 +1,4 @@
+{% for question in questions %}
+<a href="{% url 'choice_answer' question.id %}">{{ question.title }}</a>
+{{ question.date_create }}
+{% endfor %}
