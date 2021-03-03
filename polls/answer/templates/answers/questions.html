@@ -1,4 +1,5 @@
-{% for question in questions %}
-<a href="{% url 'choice_answer' question.id %}">{{ question.title }}</a>
-{{ question.date_create }}
+<p>Опрос по предмету: {{ polls.name }} </p><br>
+{% for question in questions %}<br>
+<a href="{% url 'choice_answer' question.id %}">{{ question.title }}</a><br>
+
 {% endfor %}

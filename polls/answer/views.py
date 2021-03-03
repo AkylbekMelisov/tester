@@ -13,7 +13,7 @@ def polls_page(request):
 def questions_page(request, poll_id):
     poll = Poll.objects.get(id=poll_id)
     question = poll.question_set.all()
-    context = {'questions': question}
+    context = {'questions': question, 'polls': poll}
     return render(request, 'answers/questions.html', context)
 
 

@@ -1,11 +1,13 @@
-{{questions.title}}
+{{ questions.title }}
+{{ questions.poll.points }}
+
+{% for choiceanswer in choiceanswers %}
+
+<p>{{ choiceanswer.variance }}</p>
+
+{% endfor %}
 <form action="" method="POST">
     {% csrf_token %}
 {{ form }}
     <input type="submit" name="Submit">
 </form>
-
-{% for choiceanswer in choiceanswers %}
-{{ choiceanswer.variance }}
-{% endfor %}
-
