@@ -33,4 +33,4 @@ class Answer(models.Model):
     question = models.OneToOneField(Question, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.name
+        return self.answer
